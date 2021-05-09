@@ -1,0 +1,134 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  vertical-align: baseline
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+=colorPinkk()
+  color: #ffd0d0
+=bgPinkk()
+  background: #ffd0d0
+=colorBluee()
+  color: #171c61
+=bgBluee()
+  background: #171c61
+=roundRound($sizee)
+  height: $sizee
+  width: $sizee
+  border-radius: $sizee/2
+a
+  color: #2e2e2e
+  text-decoration: none
+  transition: all 0.5s
+a:hover
+  +colorPinkk()
+body
+  +colorBluee()
+  background: #fff
+  width: 99vw
+  scroll-behavior: smooth
+  .cursor
+    pointer-events: none
+    &__ball
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 1000
+
+    circle
+      +colorBluee()
+
+  div.mainContent
+    #nav
+      position: fixed
+      text-align: right
+      right: 0
+      top: 40vh
+      z-index: 100
+      li
+        margin-right: 3rem
+        margin-top: 2rem
+        font-size: 1.3rem
+        display: block
+        letter-spacing: 0.3rem
+    div.title
+      position: fixed
+      margin-left: 2rem
+      top: 4rem
+      opacity: 0
+      line-height: 4rem
+      letter-spacing: 0.3rem
+      z-index: 100
+      span
+        font-size: 3rem
+        display: inline-block
+    #cover
+      position: relative
+      width: 99vw
+      height: 100vh
+      overflow: hidden
+      div.pinkk
+        +roundRound(70vh)
+        +bgPinkk()
+        position: absolute
+        top: 15vh
+        right: 0
+
+        z-index: -10
+        filter: blur(50px)
+
+      div.bluee
+        +roundRound(70vh)
+        +bgBluee()
+        position: absolute
+        top: 15vh
+        left: 0
+        z-index: -10
+        filter: blur(50px)
+
+      div
+        //background: #ff0000
+        h1
+          font-size: 5rem
+.container
+  overflow: hidden
+  .thing
+    position: relative
+    height: 100vh
+    width: 100vw
+    opacity: 0
