@@ -16,6 +16,7 @@ time, mark, audio, video
   border: 0
   font-size: 100%
   vertical-align: baseline
+  font-weight: 200
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section
@@ -38,7 +39,12 @@ q:before, q:after
 table
   border-collapse: collapse
   border-spacing: 0
-
+=Pinkk()
+  #ffd0d0
+=Bluee()
+  #171c61
+=Brown()
+  #e8b470
 =colorPinkk()
   color: #ffd0d0
 =bgPinkk()
@@ -47,21 +53,27 @@ table
   color: #171c61
 =bgBluee()
   background: #171c61
+=colorBrown()
+  color: #e8b470
+=bgBrown()
+  background: #e8b470
 =roundRound($sizee)
   height: $sizee
   width: $sizee
   border-radius: $sizee/2
 a
-  color: #2e2e2e
+  +colorBluee()
   text-decoration: none
   transition: all 0.5s
+
 a:hover
   +colorPinkk()
 body
   +colorBluee()
   background: #fff
-  width: 99vw
+  width: 100vw
   scroll-behavior: smooth
+  overflow-x: hidden
   .cursor
     pointer-events: none
     &__ball
@@ -74,45 +86,72 @@ body
       +colorBluee()
 
   div.mainContent
+    .line
+      position: fixed
+      bottom: 14vh
+      right: 3rem
+      border-right: 2px solid #171c61
+      border-radius: 2px
+      height: 6vw
+      width: 1rem
+      z-index: -1000
+
     #nav
       position: fixed
       text-align: right
       right: 0
       top: 40vh
-      z-index: 100
+      z-index: 1
+
       li
         margin-right: 3rem
         margin-top: 2rem
         font-size: 1.3rem
         display: block
         letter-spacing: 0.3rem
+        p
+          font-weight: 400
+          display: inline
+          position: relative
+
+        p:after
+          position: absolute
+          content: ""
+          background: #fff
+          bottom: 0
+          right: 0
+          height: 110%
+          width: 110%
+          z-index: -1
+          border-radius: 10rem
+          filter: blur(10px)
+
     div.title
       position: fixed
-      margin-left: 2rem
-      top: 4rem
-      opacity: 0
+      margin-left: 3rem
+      top: 3rem
       line-height: 4rem
       letter-spacing: 0.3rem
       z-index: 100
       span
         font-size: 3rem
         display: inline-block
+
     #cover
       position: relative
-      width: 99vw
+      width: 100vw
       height: 100vh
-      overflow: hidden
-      div.pinkk
+
+      .pinkk
         +roundRound(70vh)
         +bgPinkk()
         position: absolute
         top: 15vh
         right: 0
-
         z-index: -10
         filter: blur(50px)
 
-      div.bluee
+      .bluee
         +roundRound(70vh)
         +bgBluee()
         position: absolute
@@ -126,9 +165,81 @@ body
         h1
           font-size: 5rem
 .container
-  overflow: hidden
+  //overflow: hidden
+  padding: 3rem
+  padding-right: 4rem
+  margin: 0
+  width: 100%
+  max-width: 100%
+
   .thing
+    margin-left: 0
+    padding-top: 4rem
     position: relative
     height: 100vh
-    width: 100vw
-    opacity: 0
+    width: 100%
+    .ball
+      +roundRound(20vh)
+      position: absolute
+      filter: blur(20px)
+    .melball
+      +roundRound(10vh)
+      +bgPinkk()
+      left: 0
+      bottom: 2rem
+    .merball
+      +bgBluee()
+      right: 0
+      top: 4rem
+    .leftitle
+      position: absolute
+      left: 0
+      bottom: 2rem
+      p
+        font-size: 4rem
+        letter-spacing: 0.5rem
+    .myself
+      position: relative
+      width: 68%
+      height: 80%
+
+      margin: 0 16%
+      .meimg
+        position: absolute
+        display: flex
+
+        width: 40vw
+        height: 70vh
+        margin-top: 10vh
+        margin-left: 5vw
+
+        img
+
+      .metext
+        position: absolute
+
+        width: 40vw
+        height: 70vh
+        margin-top: 10vh
+        margin-left: 40vw
+        font-size: 1.2rem
+        line-height: 3.5rem
+        letter-spacing: 0.2rem
+        p
+          font-weight: bold
+      .mecircle
+        position: absolute
+        +roundRound(70vh)
+        +bgPinkk()
+        z-index: -10
+        top: 10vh
+        left: 20vw
+        filter: blur(50px)
+
+#foot
+  padding-top: 4rem
+  position: relative
+  height: 20vh
+  width: 100%
+  margin-left: 0
+  +bgBluee

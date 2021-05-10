@@ -16,6 +16,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
+  font-weight: 200;
 }
 
 article, aside, details, figcaption, figure,
@@ -47,7 +48,7 @@ table {
 }
 
 a {
-  color: #2e2e2e;
+  color: #171c61;
   text-decoration: none;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -60,8 +61,9 @@ a:hover {
 body {
   color: #171c61;
   background: #fff;
-  width: 99vw;
+  width: 100vw;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body .cursor {
@@ -79,12 +81,23 @@ body .cursor circle {
   color: #171c61;
 }
 
+body div.mainContent .line {
+  position: fixed;
+  bottom: 14vh;
+  right: 3rem;
+  border-right: 2px solid #171c61;
+  border-radius: 2px;
+  height: 6vw;
+  width: 1rem;
+  z-index: -1000;
+}
+
 body div.mainContent #nav {
   position: fixed;
   text-align: right;
   right: 0;
   top: 40vh;
-  z-index: 100;
+  z-index: 1;
 }
 
 body div.mainContent #nav li {
@@ -95,11 +108,30 @@ body div.mainContent #nav li {
   letter-spacing: 0.3rem;
 }
 
+body div.mainContent #nav li p {
+  font-weight: 400;
+  display: inline;
+  position: relative;
+}
+
+body div.mainContent #nav li p:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  height: 110%;
+  width: 110%;
+  z-index: -1;
+  border-radius: 10rem;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
 body div.mainContent div.title {
   position: fixed;
-  margin-left: 2rem;
-  top: 4rem;
-  opacity: 0;
+  margin-left: 3rem;
+  top: 3rem;
   line-height: 4rem;
   letter-spacing: 0.3rem;
   z-index: 100;
@@ -112,12 +144,11 @@ body div.mainContent div.title span {
 
 body div.mainContent #cover {
   position: relative;
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
-body div.mainContent #cover div.pinkk {
+body div.mainContent #cover .pinkk {
   height: 70vh;
   width: 70vh;
   border-radius: 35vh;
@@ -130,7 +161,7 @@ body div.mainContent #cover div.pinkk {
           filter: blur(50px);
 }
 
-body div.mainContent #cover div.bluee {
+body div.mainContent #cover .bluee {
   height: 70vh;
   width: 70vh;
   border-radius: 35vh;
@@ -148,13 +179,108 @@ body div.mainContent #cover div h1 {
 }
 
 .container {
-  overflow: hidden;
+  padding: 3rem;
+  padding-right: 4rem;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .container .thing {
+  margin-left: 0;
+  padding-top: 4rem;
   position: relative;
   height: 100vh;
-  width: 100vw;
-  opacity: 0;
+  width: 100%;
+}
+
+.container .thing .ball {
+  height: 20vh;
+  width: 20vh;
+  border-radius: 10vh;
+  position: absolute;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+}
+
+.container .thing .melball {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 5vh;
+  background: #ffd0d0;
+  left: 0;
+  bottom: 2rem;
+}
+
+.container .thing .merball {
+  background: #171c61;
+  right: 0;
+  top: 4rem;
+}
+
+.container .thing .leftitle {
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+}
+
+.container .thing .leftitle p {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+}
+
+.container .thing .myself {
+  position: relative;
+  width: 68%;
+  height: 80%;
+  margin: 0 16%;
+}
+
+.container .thing .myself .meimg {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40vw;
+  height: 70vh;
+  margin-top: 10vh;
+  margin-left: 5vw;
+}
+
+.container .thing .myself .metext {
+  position: absolute;
+  width: 40vw;
+  height: 70vh;
+  margin-top: 10vh;
+  margin-left: 40vw;
+  font-size: 1.2rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.2rem;
+}
+
+.container .thing .myself .metext p {
+  font-weight: bold;
+}
+
+.container .thing .myself .mecircle {
+  position: absolute;
+  height: 70vh;
+  width: 70vh;
+  border-radius: 35vh;
+  background: #ffd0d0;
+  z-index: -10;
+  top: 10vh;
+  left: 20vw;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+}
+
+#foot {
+  padding-top: 4rem;
+  position: relative;
+  height: 20vh;
+  width: 100%;
+  margin-left: 0;
+  background: #171c61;
 }
 /*# sourceMappingURL=style.css.map */

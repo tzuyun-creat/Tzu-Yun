@@ -7,7 +7,7 @@ document.body.addEventListener('mousemove', onMouseMove);
 
 // Move the cursor
 function onMouseMove(e) {
-  TweenMax.to($smallBall, .1, {
+  TweenMax.to($smallBall, .4, {
     x: e.clientX -8,
     y: e.clientY -10
   })
@@ -24,17 +24,12 @@ function vw(v) {
 
 
 
-gsap.to(".pinkk", {duration: 5, x: vw(-60),repeat: -1,yoyo: true,ease: "sine.inOut"
-,scrollTrigger: {
-  trigger: "#herosection",
-  start: "top bottom",
-  toggleActions: "play pause play pause"
-}});
-gsap.to(".bluee", {duration: 5, x: vw(60),repeat: -1,yoyo: true,ease: "sine.inOut"
-,scrollTrigger: {
-  trigger: "#herosection",
-  start: "top bottom",
-  toggleActions: "play pause play pause"
-}});
-gsap.to(".title", {duration: 2, opacity: 1, y: -50});
-gsap.to(".thing", {duration: 2, opacity: 1, y: -50});
+gsap.from(".pinkk", {duration: 5, x: vw(-60),repeat: -1,yoyo: true,ease: "sine.inOut"
+});
+gsap.from(".bluee", {duration: 5, x: vw(60),repeat: -1,yoyo: true,ease: "sine.inOut"
+});
+gsap.from(".title", {duration: 1, opacity: 0, x: -40});
+gsap.from(".title", {duration: 1, letterSpacing: 0,delay:0.5});
+gsap.from(".line", {duration: 3, y: vw(10),repeat: -1,yoyo: true,ease: "sine.inOut"
+});
+
