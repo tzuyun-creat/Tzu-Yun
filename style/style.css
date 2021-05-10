@@ -126,6 +126,8 @@ body div.mainContent #nav li p:after {
   border-radius: 10rem;
   -webkit-filter: blur(10px);
           filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 body div.mainContent div.title {
@@ -159,6 +161,8 @@ body div.mainContent #cover .pinkk {
   z-index: -10;
   -webkit-filter: blur(50px);
           filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
 }
 
 body div.mainContent #cover .bluee {
@@ -172,6 +176,8 @@ body div.mainContent #cover .bluee {
   z-index: -10;
   -webkit-filter: blur(50px);
           filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
 }
 
 body div.mainContent #cover div h1 {
@@ -201,6 +207,8 @@ body div.mainContent #cover div h1 {
   position: absolute;
   -webkit-filter: blur(20px);
           filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
 
 .container .thing .melball {
@@ -238,13 +246,15 @@ body div.mainContent #cover div h1 {
 
 .container .thing .myself .meimg {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 40vw;
   height: 70vh;
   margin-top: 10vh;
   margin-left: 5vw;
+  overflow: hidden;
+}
+
+.container .thing .myself .meimg img {
+  width: 80%;
 }
 
 .container .thing .myself .metext {
@@ -273,6 +283,8 @@ body div.mainContent #cover div h1 {
   left: 20vw;
   -webkit-filter: blur(50px);
           filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
 }
 
 #foot {
