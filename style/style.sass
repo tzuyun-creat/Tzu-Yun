@@ -24,6 +24,7 @@ footer, header, hgroup, menu, nav, section
 
 body
   line-height: 1
+  min-width: 1400px
 
 ol, ul
   list-style: none
@@ -63,8 +64,14 @@ table
   border-radius: $sizee/2
 =blurr($blu)
   filter: blur($blu)
-  -webkit-backdrop-filter: blur($blu)
   backdrop-filter: blur($blu)
+  -webkit-backdrop-filter: blur($blu)
+
+=border()
+  border-color: #000
+  border-style: solid
+  border-width: 2px
+
 a
   +colorBluee()
   text-decoration: none
@@ -98,14 +105,14 @@ body
       border-radius: 2px
       height: 6vw
       width: 1rem
-      z-index: -1000
+      z-index: 300
 
     #nav
       position: fixed
       text-align: right
       right: 0
       top: 40vh
-      z-index: 1
+      z-index: 999
 
       li
         margin-right: 3rem
@@ -114,7 +121,7 @@ body
         display: block
         letter-spacing: 0.3rem
         p
-          font-weight: 400
+          font-weight: 550
           display: inline
           position: relative
 
@@ -175,6 +182,7 @@ body
   margin: 0
   width: 100%
   max-width: 100%
+  min-width: 700px
 
   .thing
     margin-left: 0
@@ -182,6 +190,7 @@ body
     position: relative
     height: 100vh
     width: 100%
+    min-width: 500px
     .ball
       +roundRound(20vh)
       position: absolute
@@ -192,22 +201,28 @@ body
       left: 0
       bottom: 2rem
     .merball
-      +bgBluee()
+      +roundRound(10vh)
+      +bgPinkk()
       right: 0
       top: 4rem
     .leftitle
       position: absolute
       left: 0
       bottom: 2rem
+      z-index: 100
       p
         font-size: 4rem
         letter-spacing: 0.5rem
+        line-height: 5rem
+
     .myself
       position: relative
       width: 68%
       height: 80%
-
+      min-width: 500px
+      min-height: 700px
       margin: 0 16%
+
       .meimg
         position: absolute
         width: 40vw
@@ -215,19 +230,21 @@ body
         margin-top: 10vh
         margin-left: 5vw
         overflow: hidden
+        min-width: 400px
+
         img
           width: 80%
+          min-width: 400px
 
       .metext
         position: absolute
-
         width: 40vw
         height: 70vh
         margin-top: 10vh
-        margin-left: 40vw
-        font-size: 1.2rem
-        line-height: 3.5rem
-        letter-spacing: 0.2rem
+        margin-left: 45vw
+        font-size: 1.1vw
+        line-height: 3.2vw
+        letter-spacing: 0.2vw
         p
           font-weight: bold
       .mecircle
@@ -240,9 +257,256 @@ body
         +blurr(50px)
 
 #foot
-  padding-top: 4rem
+  padding-top: 0rem
   position: relative
   height: 20vh
-  width: 100%
+
   margin-left: 0
   +bgBluee
+
+.section
+  position: relative
+  width: 60%
+  height: 100%
+  min-width: 500px
+  min-height: 700px
+  margin: 0% 20%
+  padding: 50vh 0%
+  transform: translate(0, -25%)
+
+  .ballsection
+    display: flex
+    flex-direction: row
+    align-content: center
+    flex-direction: center
+    justify-content: space-around
+    flex-wrap: nowrap
+    width: 100%
+    height: 50%
+    &.ballsection3
+      img
+        margin: 0 65%
+
+    .ballo
+
+    .ballo:after
+      content: ''
+      +bgBluee()
+      position: absolute
+      top: 0%
+      right: 0%
+      width: 20vw
+      height: 20vw
+      min-width: 200px
+      z-index: -100
+      +blurr(40px)
+      border-radius: 50%
+
+    .balloo1
+
+    .balloo1:after
+      content: ''
+      +bgPinkk()
+      position: absolute
+      top: 0%
+      right: 0%
+      width: 20vw
+      height: 20vw
+      min-width: 200px
+      z-index: -100
+      +blurr(40px)
+      border-radius: 50%
+    img
+      width: 20vw
+      min-width: 200px
+      object-fit: contain
+      margin: 0 50%
+      transform: translate(-50%)
+      border-radius: 30%
+      opacity: 0
+      transition: 1s
+      -webkit-transition: 1.5s
+      // +blurr(2px)
+    img:hover
+      opacity: 1
+
+    .ballcis1
+      position: relative
+      width: 100%
+      height: 20vw
+      z-index: 2
+      &:hover:before
+        content: ''
+        position: absolute
+        top: 120%
+        left: 30%
+        width: 60%
+        height: 60%
+        z-index: 800
+        font-size: 1.3rem
+        font-weight: 550
+        content: '對白設計\A Dialogue Design'
+        white-space: pre-line
+        line-height: 2.2rem
+        letter-spacing: 0.1rem
+
+    .ballcis2
+      transition: 0.3s
+      position: relative
+      width: 100%
+      height: 20vw
+      z-index: 1
+      &:hover:before
+        content: ''
+        position: absolute
+        top: 120%
+        left: 30%
+        width: 60%
+        height: 60%
+        z-index: 800
+        font-size: 1.3rem
+        font-weight: 550
+        content: '空軍舊址\A Air Force Command Headquarters'
+        white-space: pre-line
+        line-height: 2.2rem
+        letter-spacing: 0.1rem
+
+    .ballcis3
+      position: relative
+      width: 100%
+      height: 20vw
+      z-index: 2
+      &:hover:before
+        content: ''
+        position: absolute
+        top: 120%
+        left: 30%
+        width: 60%
+        height: 60%
+        z-index: 800
+        font-size: 1.3rem
+        font-weight: 550
+        content: '嗨森設計工作室\A High Song Design'
+        white-space: pre-line
+        line-height: 2.2rem
+        letter-spacing: 0.1rem
+    .ballgra1
+      position: relative
+      width: 100%
+      height: 20vw
+      z-index: 2
+      &:hover:before
+        content: ''
+        position: absolute
+        top: 120%
+        left: 30%
+        width: 60%
+        height: 60%
+        z-index: 800
+        font-size: 1.3rem
+        font-weight: 550
+        content: '無垢體\A Purity'
+        white-space: pre-line
+        line-height: 2.2rem
+        letter-spacing: 0.1rem
+
+    .ballgra2
+      transition: 0.3s
+      position: relative
+      width: 100%
+      height: 20vw
+      z-index: 1
+      &:hover:before
+        content: ''
+        position: absolute
+        top: 120%
+        left: 30%
+        width: 60%
+        height: 60%
+        z-index: 800
+        font-size: 1.3rem
+        font-weight: 550
+        content: '字體與書封\A Typographic & Cover Desig'
+        white-space: pre-line
+        line-height: 2.2rem
+        letter-spacing: 0.1rem
+
+  .ballgra3
+    position: relative
+    width: 100%
+    height: 20vw
+    z-index: 2
+    &:hover:before
+      content: ''
+      position: absolute
+      top: 120%
+      left: 30%
+      width: 60%
+      height: 60%
+      z-index: 800
+      font-size: 1.3rem
+      font-weight: 550
+      content: '誤植\A Botanical Error'
+      white-space: pre-line
+      line-height: 2.2rem
+      letter-spacing: 0.1rem
+  .ballmo1
+    position: relative
+    width: 100%
+    height: 20vw
+    z-index: 2
+    &:hover:before
+      content: ''
+      position: absolute
+      top: 120%
+      left: 50%
+      width: 60%
+      height: 60%
+      z-index: 800
+      font-size: 1.3rem
+      font-weight: 550
+      content: '後獨白 動態設計\A Post-Monologue'
+      white-space: pre-line
+      line-height: 2.2rem
+      letter-spacing: 0.1rem
+  .ballmo2
+    position: relative
+    width: 100%
+    height: 20vw
+    z-index: 2
+    &:hover:before
+      content: ''
+      position: absolute
+      top: 120%
+      left: 50%
+      width: 60%
+      height: 60%
+      z-index: 800
+      font-size: 1.3rem
+      font-weight: 550
+      content: '赤\A RED'
+      white-space: pre-line
+      line-height: 2.2rem
+      letter-spacing: 0.1rem
+  .textsection
+    display: flex
+    flex-direction: row
+    align-content: center
+    flex-direction: center
+    justify-content: space-around
+    flex-wrap: nowrap
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    h1
+      font-size: 1.5rem
+      font-weight: 550
+    h2
+      font-weight: 550
+    .textcis
+      +colorBluee()
+      font-size: 1.1rem
+      z-index: 999
+      position: relative
+      margin-top: 40%
