@@ -78,7 +78,7 @@ body .cursor__ball {
 }
 
 body .cursor circle {
-  color: #171c61;
+  background: #171c61;
 }
 
 body div.mainContent .line {
