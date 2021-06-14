@@ -100,7 +100,7 @@ body
       z-index: 1000
 
     circle
-      +colorBluee()
+      +bgBluee()
 
   div.mainContent
     .line
@@ -154,19 +154,19 @@ body
         font-size: 3rem
         display: inline-block
 
-    #cover
-      position: relative
-      width: 100vw
-      height: 100vh
+  #cover
+    position: relative
+    width: 100vw
+    height: 100vh
 
-      .pinkk
-        +roundRound(70vh)
-        +bgPinkk()
-        position: absolute
-        top: 15vh
-        right: 0
-        z-index: -10
-        +blurr(50px)
+    .pinkk
+      +roundRound(70vh)
+      +bgPinkk()
+      position: absolute
+      top: 15vh
+      right: 0
+      z-index: -10
+      +blurr(50px)
 
       .bluee
         +roundRound(70vh)
@@ -181,10 +181,12 @@ body
         //background: #ff0000
         h1
           font-size: 5rem
+
 .container
   //overflow: hidden
   padding: 3rem
   padding-right: 4rem
+  padding-top: 0
   margin: 0
   width: 100%
   max-width: 100%
@@ -212,31 +214,30 @@ body
       right: 0
       top: 4rem
     .leftitle
-      position: absolute
-      left: 0
+      position: fixed
+      left: 3rem
       bottom: 2rem
       z-index: 100
       p
-        font-size: 4rem
+        font-size: 3rem
         letter-spacing: 0.4rem
-        line-height: 5rem
+        line-height: 4rem
 
     .myself
       position: relative
-      width: 68%
-      height: 80%
+      width: 100vw
+      height: 750px
       min-width: 500px
       min-height: 700px
-      margin: 0 16%
+      overflow: hidden
 
       .meimg
         position: absolute
-        width: 40vw
-        height: 75vh
-        margin-top: 10vh
-        margin-left: 5vw
-        overflow: hidden
+        width: 1500px
+        height: 750px
+        margin: 0 50%
         min-width: 400px
+        transform: translate(-25%)
 
         img
           width: 80%
@@ -244,7 +245,7 @@ body
 
       .metext
         position: absolute
-        width: 20vw
+        width: 40vw
         height: 70vh
         margin-top: 10vh
         margin-left: 45vw
@@ -268,6 +269,7 @@ body
   height: 20vh
   +bgBluee
   color: #fff
+  z-index: 500
   .footer
     position: absolute
     top: 3rem
@@ -276,8 +278,6 @@ body
     letter-spacing: 0.2rem
     h1
       font-size: 1.5rem
-    a
-      color: #fff
 
 .section
   position: relative
@@ -300,38 +300,12 @@ body
     height: 50%
 
     .ballo
-
     .ballo:after
       content: ''
       +bgBluee()
       position: absolute
       top: 0%
-      left: 0%
-      width: 20vw
-      height: 20vw
-      min-width: 200px
-      z-index: -100
-      +blurr(40px)
-      border-radius: 50%
-
-    .justifyball:after
-      content: ''
-      +bgBluee()
-      position: absolute
-      top: 0%
-      left: 16%
-      width: 20vw
-      height: 20vw
-      min-width: 200px
-      z-index: -100
-      +blurr(40px)
-      border-radius: 50%
-    .justifyball2:after
-      content: ''
-      +bgPinkk()
-      position: absolute
-      top: 0%
-      left: 16%
+      right: 0%
       width: 20vw
       height: 20vw
       min-width: 200px
@@ -340,6 +314,7 @@ body
       border-radius: 50%
 
     .balloo1
+
     .balloo1:after
       content: ''
       +bgPinkk()
@@ -381,7 +356,7 @@ body
         z-index: 800
         font-size: 1.3rem
         font-weight: 550
-        content: '穿越佛陀\A Future Religion'
+        content: '對白設計\A Dialogue Design'
         white-space: pre-line
         line-height: 2.2rem
         letter-spacing: 0.1rem
@@ -402,7 +377,7 @@ body
         z-index: 800
         font-size: 1.3rem
         font-weight: 550
-        content: '對白設計\A Dialogue Design'
+        content: '空軍舊址\A Air Force Command Headquarters'
         white-space: pre-line
         line-height: 2.2rem
         letter-spacing: 0.1rem
@@ -490,12 +465,12 @@ body
     position: relative
     width: 100%
     height: 20vw
-    z-index: 5
+    z-index: 2
     &:hover:before
       content: ''
       position: absolute
       top: 120%
-      left: 30%
+      left: 50%
       width: 60%
       height: 60%
       z-index: 800
@@ -514,7 +489,7 @@ body
       content: ''
       position: absolute
       top: 120%
-      left: 30%
+      left: 50%
       width: 60%
       height: 60%
       z-index: 800
